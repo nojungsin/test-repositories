@@ -1,8 +1,6 @@
 public class FailureExample {
     public static void main(String[] args) {
-        int[] numbers = {1, 2, 3};
-        int value = numbers[3]; // IndexOutOfBoundsException 발생
-        
-        System.out.println("Value: " + value);
+        // 코드 실행 중에 예외 발생
+        throw new RuntimeException("Intentional failure");
     }
 }
