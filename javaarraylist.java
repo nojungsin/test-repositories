@@ -1,18 +1,8 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
-public class FileRead {
+public class FailureExample {
     public static void main(String[] args) {
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader("nonexistent.txt"));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        int[] numbers = {1, 2, 3};
+        int value = numbers[3]; // IndexOutOfBoundsException 발생
+        
+        System.out.println("Value: " + value);
     }
 }
